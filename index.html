@@ -15,7 +15,7 @@
     <main class="text-center">
         <h1 class="my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <p class="my-4 h4 w-50 m-auto">
-            Benvenuto, in questa pagina potrai calcolre il prezzo del tuo biglieto. 
+            Benvenuto, in questa pagina potrai calcolare il prezzo del tuo biglieto. 
             Inserisci tutti i dati e successivamente clicca sul tasto <b>"GENERA"</b>. 
             In caso di errore per ritornare alla schermata iniziale, cliccare su <b>"ANNULLA"</b>.
         </p>
@@ -24,19 +24,19 @@
                 <div class="col-4">
                     <label for="user_name" class="form-label">Nome e Cognome</label>
                     <input type="text" class="form-control" id="user_name" placeholder="es. Mario Rossi">
-                    
+                    <p id="allert_name" class="d-none text-danger">Attenzione, campo obbligatorio</p>
                 </div>
 
                 <div class="col-4">
                     <label for="km_user" class="form-label">Quanti km vuoi percorrere</label>
                     <input type="text" class="form-control" id="km_user" placeholder="es. 10">
-                    
+                    <p id="allert_km" class="d-none text-danger">Attenzione, campo obbligatorio</p>
                 </div>
 
                 <div class="col-4">
                     <label for="user_age" class="form-label">Fascia d'età</label>
                     <select id="user_age" class="form-select " aria-label="Default select example">        
-                        <option value="1" selected>Maggiorenne</option>
+                        <option value="1" selected>Maggiorenne (tra i 18 e i 65 anni)</option>
                         <option value="2">Minorenne</option>
                         <option value="3">Over 65</option>
                     </select>
@@ -46,10 +46,9 @@
             <button id="send_information" type="button" class="btn btn-primary my-3">Genera</button>
             <button id="cancel_information" type="button" class="btn btn-primary my-3">Annulla</button>
         </section>
-        <!-- <h3>Numero di km da percorrere: <span id="km"></span></h3>
-        <h3>Età: <span id="userAge"></span> anni</h3> -->
+        
 
-
+        <!-- Sezione dati del biglietto -->
         <section id="ticket" class="container my-4 d-none">
             <div class="card">
                 <div class="card-header text-start">
