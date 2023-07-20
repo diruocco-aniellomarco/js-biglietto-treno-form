@@ -12,26 +12,94 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Costo del Biglietto</h1>
-    <label for="km_user" class="form-label">Quanti km vuoi percorrere</label>
-    <input type="text" class="d-block" id="km_user" placeholder="es. 10">
-  
-    
-    <label for="user_age" class="form-label">Quanti km vuoi percorrere</label>
-    <select id="user_age" class="form-select w-25" aria-label="Default select example">        
-        <option value="1" selected>Maggiorenne</option>
-        <option value="2">Minorenne</option>
-        <option value="3">Over 65</option>
-      </select>
+    <main class="text-center">
+        <h1 class="my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <p class="my-4 h4 w-50 m-auto">
+            Benvenuto, in questa pagina potrai calcolre il prezzo del tuo biglieto. 
+            Inserisci tutti i dati e successivamente clicca sul tasto <b>"GENERA"</b>. 
+            In caso di errore per ritornare alla schermata iniziale, cliccare su <b>"ANNULLA"</b>.
+        </p>
+        <section class="container">
+            <div class="row">
+                <div class="col-4">
+                    <label for="user_name" class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="user_name" placeholder="es. Mario Rossi">
+                    
+                </div>
 
-      <button id="send_information" type="button" class="btn btn-primary">Genera</button>
+                <div class="col-4">
+                    <label for="km_user" class="form-label">Quanti km vuoi percorrere</label>
+                    <input type="text" class="form-control" id="km_user" placeholder="es. 10">
+                    
+                </div>
 
-    <!-- <h3>Numero di km da percorrere: <span id="km"></span></h3>
-    <h3>Età: <span id="userAge"></span> anni</h3> -->
+                <div class="col-4">
+                    <label for="user_age" class="form-label">Fascia d'età</label>
+                    <select id="user_age" class="form-select " aria-label="Default select example">        
+                        <option value="1" selected>Maggiorenne</option>
+                        <option value="2">Minorenne</option>
+                        <option value="3">Over 65</option>
+                    </select>
+                </div>
+                
+            </div>
+            <button id="send_information" type="button" class="btn btn-primary my-3">Genera</button>
+            <button id="cancel_information" type="button" class="btn btn-primary my-3">Annulla</button>
+        </section>
+        <!-- <h3>Numero di km da percorrere: <span id="km"></span></h3>
+        <h3>Età: <span id="userAge"></span> anni</h3> -->
 
 
+        <section id="ticket" class="container my-4 d-none">
+            <div class="card">
+                <div class="card-header text-start">
+                    <h2>Biglietto</h2>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="ticket_data">
+                            
+                            <h3 class="w-50 text-end">Costo del biglietto: </h3>
+                            <span class="w-50 text-start ps-2" id="ticketCost"></span>
+                        
+                            <h4 class="w-50 text-end">Sconto applicato: </h4>
+                            <span class="w-50 text-start ps-2" id="discount"></span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <h3 class="text-start">Dettagli biglietto</h3>                    
+                    </li>
+                    <li class="list-group-item container_ticket text-start">
+                        <div class="row">
+                            <div class="col-4 bg-secondary ticket_border border-end-0">
+                                <h4>Nome Passeggero</h4>
+                                <h5 id="name_ticket"></h5>
+                            </div>
+                            <div class="col-8 d-flex info_ticket ticket_border border-start-0">
+                                <div class="col-3">
+                                    <strong>Offerta</strong>
+                                    <p id="tipe_ticket"></p>
+                                </div>
+                                <div class="col-3">
+                                    <strong>Carrozza</strong>
+                                    <p id="carriage"></p>
+                                </div>
+                                <div class="col-3">
+                                    <strong>Codice CP</strong>
+                                    <p id="codice_cp">Biglietto standard</p>
+                                </div>
+                                <div class="col-3">
+                                    <strong>Costo biglietto</strong>
+                                    <p id="cost_details">Biglietto standard</p>
+                                </div>
+                            </div>
 
-    <h3>Costo del biglietto: <span id="ticketCost"></span></h3>
-    <h4>Sconto applicato: <span id="discount"></span></h4>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
