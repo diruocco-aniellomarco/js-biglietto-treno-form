@@ -13,11 +13,18 @@
 </head>
 <body>
     <h1>Costo del Biglietto</h1>
-    <label for="kmUser" class="form-label">Quanti km vuoi percorrere</label>
-    <input type="text" class="d-block" id="kmUser" placeholder="es. 10">
+    <label for="km_user" class="form-label">Quanti km vuoi percorrere</label>
+    <input type="text" class="d-block" id="km_user" placeholder="es. 10">
   
+    
+    <label for="user_age" class="form-label">Quanti km vuoi percorrere</label>
+    <select id="user_age" class="form-select w-25" aria-label="Default select example">        
+        <option value="1" selected>Maggiorenne</option>
+        <option value="2">Minorenne</option>
+        <option value="3">Over 65</option>
+      </select>
 
-
+      <button id="send_information" type="button" class="btn btn-primary">Genera</button>
 
     <!-- <h3>Numero di km da percorrere: <span id="km"></span></h3>
     <h3>Età: <span id="userAge"></span> anni</h3> -->
